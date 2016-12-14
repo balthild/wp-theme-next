@@ -163,6 +163,14 @@ figure {
     padding: 0;
 }
 
+.comment-list .children {
+    padding-left: 45px;
+}
+
+.comment-list .children .children {
+    padding-left: 0;
+}
+
 .comment-list li:before {
     display: none;
 }

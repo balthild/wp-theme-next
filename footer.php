@@ -5,7 +5,9 @@
     <footer id="footer" class="footer">
         <div class="footer-inner">
             <div class="copyright">
-                &copy; <span itemprop="copyrightYear"><?php echo date("Y"); ?></span>
+                <!-- copyright.rotate(π) == copyleft -->
+                <i class="fa fa-copyright fa-rotate-180"></i>
+                <span itemprop="copyrightYear"><?php echo date("Y"); ?></span>
                 <span class="with-love"><?php bloginfo('name'); ?></span>
             </div>
 
