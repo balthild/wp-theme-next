@@ -12,7 +12,7 @@ add_filter("the_content_more_link", function () {
     return '<div class="post-more-link text-center"><a class="btn" href="' . get_permalink() . '">阅读全文</a></div>';
 });
 
-add_filter('wp_nav_menu_objects', function ($items ) {
+add_filter('wp_nav_menu_objects', function ($items) {
     foreach ( $items as $item ) {
         if ($item->current) {
             $item->classes[] = 'menu-item-active';
@@ -66,3 +66,17 @@ function pisces_setup() {
     ]);
 }
 add_action('after_setup_theme', 'pisces_setup');
+
+
+function pisces_widgets_init() {
+    register_sidebar([
+        'name'          => __('Sidebar'),
+        'id'            => 'main-sidebar',
+        'description'   => __('Add widgets here to appear in your sidebar.'),
+        'before_widget' => '<div id="%1$s" class="sidebar-inner widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>',
+    ]);
+}
+add_action('widgets_init', 'pisces_widgets_init');

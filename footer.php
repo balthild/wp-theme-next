@@ -1,4 +1,60 @@
- </div>
+            </div>
+
+            <div class="sidebar-toggle">
+                <div class="sidebar-toggle-line-wrap">
+                    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+                    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+                </div>
+            </div>
+
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-inner">
+                    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+                        <div class="site-author motion-element">
+                            <img class="site-author-image" src="" alt="#name">
+                            <p class="site-author-name" >#name</p>
+                            <p class="site-description motion-element" >#desc</p>
+                        </div>
+
+                        <nav class="site-state motion-element">
+                            <div class="site-state-item site-state-posts">
+                                <span class="site-state-item-count">183</span>
+                                <span class="site-state-item-name">日志</span>
+                            </div>
+                            <div class="site-state-item site-state-categories">
+                                <span class="site-state-item-count">6</span>
+                                <span class="site-state-item-name">分类</span>
+                            </div>
+                            <div class="site-state-item site-state-tags">
+                                <span class="site-state-item-count">111</span>
+                                <span class="site-state-item-name">标签</span>
+                            </div>
+                        </nav>
+
+                        <div class="feed-link motion-element">
+                            <a href="javascript:;" rel="alternate">
+                                <i class="fa fa-rss"></i> RSS
+                            </a>
+                        </div>
+
+                        <div class="links-of-author motion-element">
+                            <span class="links-of-author-item">
+                                <a href="https://github.com/iissnan" target="_blank" title="GitHub">
+                                    <i class="fa fa-fw fa-github"></i> GitHub
+                                </a>
+                            </span>
+                            <span class="links-of-author-item">
+                                <a href="https://twitter.com/iissnan" target="_blank" title="Twitter">
+                                    <i class="fa fa-fw fa-twitter"></i> Twitter
+                                </a>
+                            </span>
+                        </div>
+                    </section>
+                </div>
+
+                <?php get_sidebar(); ?>
+            </aside>
         </div>
     </main>
 

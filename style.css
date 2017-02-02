@@ -52,6 +52,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /* Menu */
 
+.menu .menu-item a {
+    border-bottom: 0;
+}
+
 .menu .menu-item a:before {
     content: "\f105";
     font: normal normal normal 14px/1 FontAwesome;
@@ -70,6 +74,97 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .site-meta {
     box-shadow: none;
+}
+
+/* Sidebar */
+.sidebar {
+    background: transparent;
+}
+
+.sidebar-inner {
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.widget {
+    text-align: left;
+    padding: 15px;
+}
+
+.widget-title {
+    font-size: 14px;
+    margin: 3px 0 10px;
+    color: #222;
+    font-weight: 600;
+}
+
+.widget ul {
+    display: block;
+    margin: 0 -15px;
+    padding: 0;
+}
+
+.widget li a {
+    display: block;
+    border-bottom: 0;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    position: relative;
+    box-sizing: border-box;
+    padding: 3px 15px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.widget li a:hover {
+    background: #f9f9f9;
+}
+
+.widget table {
+    margin: 0;
+}
+
+.widget caption, .widget th, .widget td {
+    padding: 0;
+    text-align: center;
+}
+
+.widget table a {
+    border-bottom: 0;
+}
+
+/* Search From */
+#searchform div {
+    position: relative;
+    padding-right: 48px;
+}
+
+#s {
+    height: 48px;
+    padding: 8px;
+    line-height: 32px;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#searchsubmit {
+    line-height: 48px;
+    height: 48px;
+    width: 48px;
+    padding: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 /* Posts */
