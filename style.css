@@ -86,6 +86,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
     margin-bottom: 10px;
 }
 
+.site-author-image {
+    margin-bottom: 6px;
+}
+
 .widget {
     text-align: left;
     padding: 15px;

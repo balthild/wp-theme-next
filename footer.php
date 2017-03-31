@@ -13,7 +13,7 @@
                     <section class="site-overview sidebar-panel sidebar-panel-active">
                         <?php $user = get_userdata(1); ?>
                         <div class="site-author motion-element">
-                            <img class="site-author-image" src="<?php echo get_avatar_url($user->user_email); ?>" alt="<?php echo $user->nickname; ?>">
+                            <?php echo get_avatar(1, 100, '', $user->nickname, ['class' => 'site-author-image']); ?>
                             <p class="site-author-name" ><?php echo $user->nickname; ?></p>
                             <p class="site-description motion-element" ><?php echo $user->description; ?></p>
                         </div>
