@@ -10,24 +10,25 @@
 
             <aside id="sidebar" class="sidebar">
                 <div class="sidebar-inner">
-                    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+                    <section class="site-overview sidebar-panel sidebar-panel-active">
+                        <?php $user = get_userdata(1); ?>
                         <div class="site-author motion-element">
-                            <img class="site-author-image" src="" alt="#name">
-                            <p class="site-author-name" >#name</p>
-                            <p class="site-description motion-element" >#desc</p>
+                            <img class="site-author-image" src="<?php echo get_avatar_url($user->user_email); ?>" alt="<?php echo $user->nickname; ?>">
+                            <p class="site-author-name" ><?php echo $user->nickname; ?></p>
+                            <p class="site-description motion-element" ><?php echo $user->description; ?></p>
                         </div>
 
                         <nav class="site-state motion-element">
                             <div class="site-state-item site-state-posts">
-                                <span class="site-state-item-count">183</span>
+                                <span class="site-state-item-count"><?php echo wp_count_posts()->publish; ?></span>
                                 <span class="site-state-item-name">日志</span>
                             </div>
                             <div class="site-state-item site-state-categories">
-                                <span class="site-state-item-count">6</span>
+                                <span class="site-state-item-count"><?php echo count(get_categories()); ?></span>
                                 <span class="site-state-item-name">分类</span>
                             </div>
                             <div class="site-state-item site-state-tags">
-                                <span class="site-state-item-count">111</span>
+                                <span class="site-state-item-count"><?php echo count(get_tags()); ?></span>
                                 <span class="site-state-item-name">标签</span>
                             </div>
                         </nav>
@@ -38,6 +39,7 @@
                             </a>
                         </div>
 
+                        <!--
                         <div class="links-of-author motion-element">
                             <span class="links-of-author-item">
                                 <a href="https://github.com/iissnan" target="_blank" title="GitHub">
@@ -50,6 +52,7 @@
                                 </a>
                             </span>
                         </div>
+                        -->
                     </section>
                 </div>
 
